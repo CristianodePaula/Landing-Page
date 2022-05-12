@@ -117,6 +117,8 @@ const Button = styled(motion.button)`
   text-shadow: 3px 3px 3px black;
   font-size: 20px;
   border-radius: 30px;
+  border-width: 1px;
+  border-color: grey;
   ${mobile({
   height: '50px',
   width: '120px',
@@ -165,6 +167,8 @@ const Login = styled(motion.button)`
   text-shadow: 3px 3px 3px black;
   border-radius: 30px;
   cursor: pointer;
+  border-width: 1px;
+  border-color: grey;
   ${mobile({
   height: '30px',
   width: '80px',
