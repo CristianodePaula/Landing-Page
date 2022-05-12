@@ -3,7 +3,7 @@ import Intro from './page/Intro'
 function App() {
   return (
     <>
-    <Intro />
+      <Intro />
     </>
   )
 }

@@ -22,14 +22,6 @@ The combination of framer-motion and styled-components is really powerful! Try u
 * Style-components
 * Framer-Motion
 
-## 🔧 Installations
-
-npm
-* npm install normalize.css
-* npm install ityped
-* npm install framer-motion
-* npm install --save framer-motion
-
 ## 🛠️ Built with
 
 * Visual Studio Code

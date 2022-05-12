@@ -14,9 +14,11 @@ import fish08 from '../img/fish08.png'
 import shrimps from '../img/shrimps.png'
 import starfish from '../img/starfish.png'
 import bubble from '../img/bubble.png'
-import { welcomeanime, titleAnime, buttonAnime, emergingAnime, 
-  bubbleAnime, fishfloat01Anime, fishfloat02Anime, fishfloat03Anime, 
-  fishGoBackAnime, shrimpsAnime, starfishAnime } from '../components/Animation'
+import {
+  welcomeanime, titleAnime, buttonAnime, emergingAnime,
+  bubbleAnime, fishfloat01Anime, fishfloat02Anime, fishfloat03Anime,
+  fishGoBackAnime, shrimpsAnime, starfishAnime
+} from '../components/Animation'
 import { mobile } from '../components/Responsive'
 
 const Container = styled.div`
@@ -26,9 +28,9 @@ const Container = styled.div`
   background-position: center;
   display: flex;
   align-items: center;
-  ${mobile({ 
-    justifyContent: 'center'  
-  })} 
+  ${mobile({
+  justifyContent: 'center'
+})} 
 `
 const FishContainer = styled(motion.div)`
   position: absolute;
@@ -47,10 +49,10 @@ const Fish = styled(motion.img)`
   &:nth-child(8) { position: fixed; top: 15%; right: 35% }
   &:nth-child(9) { position: fixed; top: 85%; left: 10% }
   &:nth-child(10) { position: fixed; top:65%; right: 10% }
-  ${mobile({ 
-    height: '22px',
-    width: '45px'
-  })}
+  ${mobile({
+  height: '22px',
+  width: '45px'
+})}
 `
 const BubbleContainer = styled(motion.div)`
   display: flex;
@@ -75,10 +77,10 @@ const Bubble = styled.img`
   &:nth-child(9) { animation-delay: 3s }
   &:nth-child(10) { animation-delay: 4s }
   &:nth-child(11) { animation-delay: 1s }
-  ${mobile({ 
-    width: '20px',
-    margin: '10px' 
-  })}
+  ${mobile({
+  width: '20px',
+  margin: '10px'
+})}
 `
 const BoxLeft = styled.div`
   position: absolute;
@@ -87,24 +89,24 @@ const BoxLeft = styled.div`
   color: white;
   text-shadow: 3px 3px 3px black;
   z-index: 3;
-  ${mobile({ 
+  ${mobile({
   margin: '0',
   alignItems: 'center',
   textAlign: 'center'
-  })}
+})}
 `
 const SobTitle = styled(motion.p)`
   font-size: 30px;
-  ${mobile({ 
-    fontSize: '20px'
-  })}
+  ${mobile({
+  fontSize: '20px'
+})}
 `
 const Title = styled(motion.h2)`
   font-size: 65px;
   margin-top: 5%;
-  ${mobile({ 
-    fontSize: '40px'
-  })}
+  ${mobile({
+  fontSize: '40px'
+})}
 `
 const Button = styled(motion.button)`
   height: 50px;
@@ -115,11 +117,11 @@ const Button = styled(motion.button)`
   text-shadow: 3px 3px 3px black;
   font-size: 20px;
   border-radius: 30px;
-  ${mobile({ 
-    height: '50px',
-    width: '120px',
-    fontSize: '15px'
-  })}
+  ${mobile({
+  height: '50px',
+  width: '120px',
+  fontSize: '15px'
+})}
 `
 const BoxCenter = styled.div`
   height: 100vh;
@@ -130,29 +132,29 @@ const BoxCenter = styled.div`
   top: 5%;
   left: -50%;
   right: -50%;
-  ${mobile({ 
+  ${mobile({
   top: '85%'
-  })}
+})}
 `
 const Text = styled.span`
   font-size: 30px;
   color: white;
   text-shadow: 3px 3px 3px black;
-  ${mobile({ 
-    display: 'flex',
-    justifyContent: 'flex-end',
-    fontSize: '20px',
-    Bottom: '20px'
-  })}
-` 
+  ${mobile({
+  display: 'flex',
+  justifyContent: 'flex-end',
+  fontSize: '20px',
+  Bottom: '20px'
+})}
+`
 const BoxRight = styled.div`
   position: absolute;
   top: 3%;
   margin-left: 90%;
   padding: 10px;
-  ${mobile({ 
-    margin: '5px'
-  })}
+  ${mobile({
+  margin: '5px'
+})}
 `
 const Login = styled(motion.button)`
   height: 40px; 
@@ -163,67 +165,67 @@ const Login = styled(motion.button)`
   text-shadow: 3px 3px 3px black;
   border-radius: 30px;
   cursor: pointer;
-  ${mobile({ 
-    height: '30px',
-    width: '80px',
-    fontSize: '15px'
-  })}
+  ${mobile({
+  height: '30px',
+  width: '80px',
+  fontSize: '15px'
+})}
 `
 export default function Intro() {
 
-  const welcome = useRef(); 
+  const welcome = useRef();
 
   useEffect(() => {
-      init(welcome.current,{
-          showCursor: false,
-          backDelay: 100,
-          backSpeed: 50,
-          startDelay: 6000,
-          strings: [ 'Junte-se a ONG Salve os Oceanos!']
-      })
-  },[]) 
+    init(welcome.current, {
+      showCursor: false,
+      backDelay: 100,
+      backSpeed: 50,
+      startDelay: 6000,
+      strings: ['Junte-se a ONG Salve os Oceanos!']
+    })
+  }, [])
 
   return (
     <>
-    <Container>
-    <FishContainer variants={emergingAnime} initial = 'initial' animate = 'animate'>
-      <Fish src={fish01} variants ={fishfloat03Anime} initial='initial' animate = 'animate' whileHover = {{ scale: 0.5 }} />
-        <Fish src={fish02} variants={fishGoBackAnime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
-        <Fish src={fish03} variants={fishGoBackAnime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
-        <Fish src={fish04} variants={fishfloat01Anime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
-        <Fish src={fish05} variants={fishfloat03Anime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
-        <Fish src={fish06} variants={fishfloat01Anime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
-        <Fish src={fish07} variants={fishfloat02Anime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
-        <Fish src={fish08} variants={fishfloat02Anime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
-        <Fish src={shrimps} variants={shrimpsAnime} initial='initial' animate='animate' whileHover={{ scale: 0.5, duration: 5 }} />
-        <Fish src={starfish} variants={starfishAnime} initial='initial' animate='animate' whileHover={{ scale: 0.5, duration: 5 }} />
-      </FishContainer>
-      <BubbleContainer variants={emergingAnime} initial='initial' animate='animate'>
-      <Bubble src={bubble} />
-        <Bubble src={bubble} />
-        <Bubble src={bubble} />
-        <Bubble src={bubble} />
-        <Bubble src={bubble} />
-        <Bubble src={bubble} />
-        <Bubble src={bubble} />
-        <Bubble src={bubble} />
-        <Bubble src={bubble} />
-        <Bubble src={bubble} />
-        <Bubble src={bubble} />
-        <Bubble src={bubble} />
-      </BubbleContainer>
-      <BoxLeft>
-        <SobTitle variants={welcomeanime} initial='initial' animate='animate' >Seja bem vindo!</SobTitle>
-        <Title variants={titleAnime} initial='initial' animate='animate' > Salve os Oceanos</Title>
-        <Button variants={buttonAnime} initial='initial' animate='animate' whileHover={{ scale: 1.1 }}>Faça um tour</Button>
-      </BoxLeft>
-      <BoxCenter>
-        <Text ref={welcome}></Text>
-      </BoxCenter>
-      <BoxRight>
-        <Login variants={emergingAnime} initial='initial' animate='animate' whileHover={{ scale: 1.1 }}>Entrar</Login>
-      </BoxRight>
-    </Container>
+      <Container>
+        <FishContainer variants={emergingAnime} initial='initial' animate='animate'>
+          <Fish src={fish01} variants={fishfloat03Anime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
+          <Fish src={fish02} variants={fishGoBackAnime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
+          <Fish src={fish03} variants={fishGoBackAnime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
+          <Fish src={fish04} variants={fishfloat01Anime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
+          <Fish src={fish05} variants={fishfloat03Anime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
+          <Fish src={fish06} variants={fishfloat01Anime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
+          <Fish src={fish07} variants={fishfloat02Anime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
+          <Fish src={fish08} variants={fishfloat02Anime} initial='initial' animate='animate' whileHover={{ scale: 0.5 }} />
+          <Fish src={shrimps} variants={shrimpsAnime} initial='initial' animate='animate' whileHover={{ scale: 0.5, duration: 5 }} />
+          <Fish src={starfish} variants={starfishAnime} initial='initial' animate='animate' whileHover={{ scale: 0.5, duration: 5 }} />
+        </FishContainer>
+        <BubbleContainer variants={emergingAnime} initial='initial' animate='animate'>
+          <Bubble src={bubble} />
+          <Bubble src={bubble} />
+          <Bubble src={bubble} />
+          <Bubble src={bubble} />
+          <Bubble src={bubble} />
+          <Bubble src={bubble} />
+          <Bubble src={bubble} />
+          <Bubble src={bubble} />
+          <Bubble src={bubble} />
+          <Bubble src={bubble} />
+          <Bubble src={bubble} />
+          <Bubble src={bubble} />
+        </BubbleContainer>
+        <BoxLeft>
+          <SobTitle variants={welcomeanime} initial='initial' animate='animate' >Seja bem vindo!</SobTitle>
+          <Title variants={titleAnime} initial='initial' animate='animate' > Salve os Oceanos</Title>
+          <Button variants={buttonAnime} initial='initial' animate='animate' whileHover={{ scale: 1.1 }}>Faça um tour</Button>
+        </BoxLeft>
+        <BoxCenter>
+          <Text ref={welcome}></Text>
+        </BoxCenter>
+        <BoxRight>
+          <Login variants={emergingAnime} initial='initial' animate='animate' whileHover={{ scale: 1.1 }}>Entrar</Login>
+        </BoxRight>
+      </Container>
     </>
   )
 }           
