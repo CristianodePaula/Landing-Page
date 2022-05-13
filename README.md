@@ -1,12 +1,7 @@
-<p align="center">
-<img src="https://user-images.githubusercontent.com/91747232/155815749-f9e12fe3-376d-42b3-ad06-bb1259c790fa.gif" height="250px"/>
-</p>
-<p align="center">
-<img src="https://user-images.githubusercontent.com/91747232/155821634-54d5a9ae-b6c9-4638-8ee5-a121b49cdf57.gif" height="300px"/>
-</p>
-<hr>
-
 # LEADING PAGE
+
+Click to watch the video on youtube 
+[![Watch the video](https://user-images.githubusercontent.com/91747232/168374261-df1e8f01-c558-479c-9f3b-45da20be450c.png)](https://www.youtube.com/watch?v=B6pFUMPzaMc)
 
 ## 🚀 Starting
 

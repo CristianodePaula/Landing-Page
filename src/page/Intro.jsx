@@ -15,9 +15,8 @@ import shrimps from '../img/shrimps.png'
 import starfish from '../img/starfish.png'
 import bubble from '../img/bubble.png'
 import {
-  welcomeanime, titleAnime, buttonAnime, emergingAnime,
-  bubbleAnime, fishfloat01Anime, fishfloat02Anime, fishfloat03Anime,
-  fishGoBackAnime, shrimpsAnime, starfishAnime
+  welcomeanime, titleAnime, buttonAnime, emergingAnime, bubbleAnime, fishfloat01Anime,
+  fishfloat02Anime, fishfloat03Anime, fishGoBackAnime, shrimpsAnime, starfishAnime
 } from '../components/Animation'
 import { mobile } from '../components/Responsive'
 
@@ -119,6 +118,7 @@ const Button = styled(motion.button)`
   border-radius: 30px;
   border-width: 1px;
   border-color: grey;
+  font-family: 'Courgette', cursive;
   ${mobile({
   height: '50px',
   width: '120px',
@@ -169,6 +169,7 @@ const Login = styled(motion.button)`
   cursor: pointer;
   border-width: 1px;
   border-color: grey;
+  font-family: 'Courgette', cursive;
   ${mobile({
   height: '30px',
   width: '80px',
@@ -185,7 +186,11 @@ export default function Intro() {
       backDelay: 100,
       backSpeed: 50,
       startDelay: 6000,
-      strings: ['Junte-se a ONG Salve os Oceanos!']
+      strings: [
+        'Junte-se a ONG Salve os Oceanos', 
+        'Ajude-nos em nosso trabalho', 
+        'Sua colobaroação é de máxima importância'
+      ]
     })
   }, [])
 
