@@ -23,7 +23,7 @@ The combination of framer-motion and styled-components is really powerful! Try u
 
 ## 📌 Version
 
-One version
+This repository is basically a backup. From version 0.1 (leading end) onwards there may be commits in order to improve the code.
 
 ## ✒️ Author
 
